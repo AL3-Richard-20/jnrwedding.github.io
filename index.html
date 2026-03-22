@@ -98,6 +98,18 @@
             .editorial-spread-text {
                 text-shadow: 0 0 40px rgba(0,0,0,0.05);
             }
+            @keyframes scroll {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(calc(-450px * 4 - 1.5rem * 4)); }
+            }
+            .animate-scroll {
+                display: flex;
+                width: max-content;
+                animation: scroll 30s linear infinite;
+            }
+            .animate-scroll:hover {
+                animation-play-state: paused;
+            }
         </style>
     </head>
 
