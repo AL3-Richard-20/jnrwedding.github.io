@@ -1,6 +1,6 @@
 {
-  "name": "jnrwedding.github.io",
-  "homepage": "https://al3-richard-20.github.io/jnrwedding",
+  "name": "jnrwedding",
+  "homepage": "https://AL3-Richard-20/github.io/jnrwedding",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.2.2",
