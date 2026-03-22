@@ -1,294 +1,89 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joshley &amp; Richard Wedding</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#897A5F",
+              "secondary": "#5c6060",
+              "on-secondary-fixed-variant": "#595c5c",
+              "primary": "#897A5F",
+              "tertiary-dim": "#6b4c43",
+              "primary-container": "#ffdbd0",
+              "background": "#f9f9f9",
+              "on-secondary": "#f7f9f9",
+              "on-surface-variant": "#5a6061",
+              "surface-variant": "#dde4e5",
+              "surface-container-lowest": "#ffffff",
+              "on-error-container": "#752121",
+              "surface": "#f9f9f9",
+              "surface-container-low": "#f2f4f4",
+              "surface-dim": "#d4dbdd",
+              "secondary-dim": "#505454",
+              "on-primary-container": "#694b41",
+              "on-primary-fixed": "#553830",
+              "on-primary-fixed-variant": "#74544a",
+              "on-tertiary-fixed-variant": "#705047",
+              "surface-container-highest": "#dde4e5",
+              "secondary-container": "#e1e3e3",
+              "secondary-fixed": "#e1e3e3",
+              "inverse-on-surface": "#9c9d9d",
+              "on-tertiary": "#fff7f5",
+              "error": "#9f403d",
+              "tertiary": "#78574e",
+              "primary-fixed": "#ffdbd0",
+              "surface-bright": "#f9f9f9",
+              "primary-fixed-dim": "#f6cbbe",
+              "inverse-primary": "#ffd3c6",
+              "surface-container": "#ebeeef",
+              "error-container": "#fe8983",
+              "on-tertiary-container": "#66473e",
+              "tertiary-fixed-dim": "#f0c5b9",
+              "on-background": "#2d3435",
+              "on-secondary-container": "#4f5253",
+              "outline-variant": "#adb3b4",
+              "on-tertiary-fixed": "#51352d",
+              "outline": "#757c7d",
+              "error-dim": "#4e0309",
+              "secondary-fixed-dim": "#d2d5d5",
+              "tertiary-container": "#ffd3c7",
+              "primary-dim": "#6a4b42",
+              "on-surface": "#2d3435",
+              "tertiary-fixed": "#ffd3c7",
+              "surface-container-high": "#e4e9ea",
+              "on-primary": "#fff6f3",
+              "inverse-surface": "#0c0f0f",
+              "on-secondary-fixed": "#3d4040",
+              "on-error": "#fff7f6"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+              },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
 
-    <head>
-        <meta charset="utf-8"/>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-        <title>Joshley &amp; Richard Wedding</title>
-        <!-- <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script> -->
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&amp;family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-        <script id="tailwind-config">
-            tailwind.config = {
-                darkMode: "class",
-                theme: {
-                    extend: {
-                        colors: {
-                            "surface-tint": "#897A5F",
-                            "secondary": "#5c6060",
-                            "on-secondary-fixed-variant": "#595c5c",
-                            "primary": "#897A5F",
-                            "tertiary-dim": "#6b4c43",
-                            "primary-container": "#ffdbd0",
-                            "background": "#f9f9f9",
-                            "on-secondary": "#f7f9f9",
-                            "on-surface-variant": "#5a6061",
-                            "surface-variant": "#dde4e5",
-                            "surface-container-lowest": "#ffffff",
-                            "on-error-container": "#752121",
-                            "surface": "#f9f9f9",
-                            "surface-container-low": "#f2f4f4",
-                            "surface-dim": "#d4dbdd",
-                            "secondary-dim": "#505454",
-                            "on-primary-container": "#694b41",
-                            "on-primary-fixed": "#553830",
-                            "on-primary-fixed-variant": "#74544a",
-                            "on-tertiary-fixed-variant": "#705047",
-                            "surface-container-highest": "#dde4e5",
-                            "secondary-container": "#e1e3e3",
-                            "secondary-fixed": "#e1e3e3",
-                            "inverse-on-surface": "#9c9d9d",
-                            "on-tertiary": "#fff7f5",
-                            "error": "#9f403d",
-                            "tertiary": "#78574e",
-                            "primary-fixed": "#ffdbd0",
-                            "surface-bright": "#f9f9f9",
-                            "primary-fixed-dim": "#f6cbbe",
-                            "inverse-primary": "#ffd3c6",
-                            "surface-container": "#ebeeef",
-                            "error-container": "#fe8983",
-                            "on-tertiary-container": "#66473e",
-                            "tertiary-fixed-dim": "#f0c5b9",
-                            "on-background": "#2d3435",
-                            "on-secondary-container": "#4f5253",
-                            "outline-variant": "#adb3b4",
-                            "on-tertiary-fixed": "#51352d",
-                            "outline": "#757c7d",
-                            "error-dim": "#4e0309",
-                            "secondary-fixed-dim": "#d2d5d5",
-                            "tertiary-container": "#ffd3c7",
-                            "primary-dim": "#6a4b42",
-                            "on-surface": "#2d3435",
-                            "tertiary-fixed": "#ffd3c7",
-                            "surface-container-high": "#e4e9ea",
-                            "on-primary": "#fff6f3",
-                            "inverse-surface": "#0c0f0f",
-                            "on-secondary-fixed": "#3d4040",
-                            "on-error": "#fff7f6"
-                        },
-                        fontFamily: {
-                            "headline": ["Noto Serif"],
-                            "body": ["Manrope"],
-                            "label": ["Manrope"]
-                        },
-                        borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-                    },
-                },
-            }
-        </script>
-        <style>
-            .material-symbols-outlined {
-                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-                display: inline-block;
-                line-height: 1;
-                text-transform: none;
-                letter-spacing: normal;
-                word-wrap: normal;
-                white-space: nowrap;
-                direction: ltr;
-            }
-            .no-scrollbar::-webkit-scrollbar { display: none; }
-            .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-            .glass-header {
-                background: rgba(249, 249, 249, 0.8);
-                backdrop-filter: blur(20px);
-            }
-            .editorial-spread-text {
-                text-shadow: 0 0 40px rgba(0,0,0,0.05);
-            }
-            @keyframes scroll {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(calc(-450px * 4 - 1.5rem * 4)); }
-            }
-            .animate-scroll {
-                display: flex;
-                width: max-content;
-                animation: scroll 30s linear infinite;
-            }
-            .animate-scroll:hover {
-                animation-play-state: paused;
-            }
-        </style>
-    </head>
+  </head>
 
-    <body class="bg-surface font-body text-on-background">
-
-        <!-- 1. Top Bar (Shared Component - Integrated) -->
-        <header class="sticky top-0 z-50 glass-header border-b border-outline-variant/15 px-6 lg:px-40 py-4">
-            <div class="max-w-[1200px] mx-auto flex items-center justify-between">
-                <div class="flex items-center gap-4 text-on-background">
-                    <div class="size-6 text-primary">
-                        <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                            <path clip-rule="evenodd" d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z" fill="currentColor" fill-rule="evenodd"></path>
-                            <path clip-rule="evenodd" d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z" fill="currentColor" fill-rule="evenodd"></path>
-                        </svg>
-                    </div>
-                    <h2 class="text-on-background text-xl font-headline font-bold leading-tight tracking-tight">J&amp;R Wedding</h2>
-                </div>
-                <div class="flex flex-1 justify-end items-center gap-10">
-                    <nav class="hidden md:flex items-center gap-10">
-                        <a class="text-on-background text-sm font-medium tracking-wide hover:text-primary transition-colors" href="#story">Our Story</a>
-                        <a class="text-on-background text-sm font-medium tracking-wide hover:text-primary transition-colors" href="#gallery">Gallery</a>
-                        <a class="text-on-background text-sm font-medium tracking-wide hover:text-primary transition-colors" href="#details">Details</a>
-                    </nav>
-                    <button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-11 px-6 bg-primary text-on-primary text-sm font-bold tracking-wider uppercase transition-all hover:opacity-90 active:scale-95 shadow-sm">
-                            RSVP
-                    </button>
-                </div>
-            </div>
-        </header>
-
-        <main>
-
-            <!-- 2. Minimal Jumbotron Section -->
-            <section class="relative h-[870px] flex items-center justify-center overflow-hidden bg-surface">
-                <div class="absolute inset-0 z-0 bg-cover bg-center opacity-20 grayscale" data-alt="Faded elegant floral wedding background texture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBFFkTT3_FBascI9P_8O-O_bXeaxWGge2ixgBRkUm-kyG266xcQiFcaQsralNT9OQY-res895fiZEcRzF6p0Tf3NynLXkMkiPuXG3vDoOfvT7uK3vMTXB_Rb_SO6emwCYleKdk7f_9xRWf_fK6iGHctebIl5rH88dykGcuOX5jtSOAQ0n3wSaB6tbKhB-YWaROB8_-GBCWAnROs8GTBGlH2MUuG0TDAmKubnzxDSQ9oY9Zw-Mvu0aP5WYkfv15_HoC_t2lZMjXR2Yo');"></div>
-                <div class="relative z-10 text-center px-6">
-                    <p class="font-label text-sm uppercase tracking-[0.3em] text-primary mb-6">The Union of</p>
-                    <h1 class="font-headline text-6xl md:text-8xl font-black text-on-background mb-8 leading-tight">
-                        Joshley <br class="md:hidden"/> &amp; Richard
-                    </h1>
-                    <p class="font-headline italic text-2xl text-on-surface-variant mb-12">Save the Date • 10.10.203n</p>
-                <!-- <div class="w-px h-24 bg-primary mx-auto opacity-40"></div>
-                </div> -->
-            </section>
-
-            <!-- 3. Image Carousel Section -->
-            <section class="bg-surface-container-low py-24" id="gallery">
-                <div class="max-w-[1400px] mx-auto">
-                <div class="overflow-hidden">
-                <div class="animate-scroll gap-6 py-12">
-                <!-- Original Set -->
-                <div class="flex-shrink-0 w-[300px] md:w-[450px] aspect-[4/5] bg-surface-container-highest rounded-xl overflow-hidden">
-                <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Close up of couple holding hands" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA25fd0qEkA5x3zhM63-7XNjilUwRHGHXZUjmtouUI-JtKHnLtjNaUMrUXajzvV6xXiGoX8HgeCGOpTV0EHTEbCdVpkRTVqGwJaeBLFhV2HzxpDAvlwYAx9G8jeDfEXrPPpZD1i1sr3uxVgopXQXxJz_0kzSwr3CdKRTzU_NytXDOLCDOn7QxXNaml45m-C3loHju2wk-DGTg3w_qBUfM2VdsI3xathjxNB1Olr8qpaN6gQjZ2Uxgl3edbCTeXIV2-raSXa-DWFvrc"/>
-                </div>
-                <div class="flex-shrink-0 w-[300px] md:w-[450px] aspect-[4/5] bg-surface-container-highest rounded-xl overflow-hidden">
-                <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Romantic landscape with wedding decorations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKk3bwb7XYBuoC0SE8wQ5yIimvRZX_Jicu7v5kmvuQMaOzztg6yIyc3-vCG7fdBywNFsOrUbKTiJfzwxAmM3M4rA4xa2zw36yQ-V2CAYIBFbzihsnPQU1LtTN6fz5bOncQHLfBSAzYoFEDLipyPhgQeVPtjIRSLWNAZyGC3a5wookYMgP09omBqeAc3KrBq_km34Ru7l-2fn4WAfzsQe2zKUl1PgEkgoHzkNFWbmQCYpBGB8lHy797j6EBdOUI-ZywSSjUu1V8Bjw"/>
-                </div>
-                <div class="flex-shrink-0 w-[300px] md:w-[450px] aspect-[4/5] bg-surface-container-highest rounded-xl overflow-hidden">
-                <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Happy couple laughing during engagement shoot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLsJMIpSDDYXpwPuiszTe5hKnypbPuhyqLAvaJHZpxMeOaPeJTPETWPrpcVX1cvkpRsBK_Ji748nTyLAR8WXwUH74HZ8OOY7tXIeHK7EbCjFEZgZiYAlhO1-6RtRfYzs-iIuZwRcQ1uiFKnAUalZon3QpINHb-3sgH3JfzugYrhKV6F_Ql5_O6_DcDUV0GMgMAJUHvw3gnUeo16a7CjLN54INVx4hLbIaXtXsAEEp_B6RcxZIHoBX6yvK1nUvxMefXLPCxFg2vLHU"/>
-                </div>
-                <div class="flex-shrink-0 w-[300px] md:w-[450px] aspect-[4/5] bg-surface-container-highest rounded-xl overflow-hidden">
-                <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Artistic portrait of the couple outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbbn10sds7dc7lkhy3E5r2ut2wxhzvWnaPwsDH9jIlEkE1IAJpDA140GxVXY6yfFrWA6iCTzTxafmUlzxUl0DKC3mL9GVgA5FArgKTYD5609EQrMv5zSOVLHSrDsssQWuuJj-xHc-4KxpSANA5Ncf2kjZG8rwTSLbee0NmelNPOJl_2USW5jKwKn0Mltkz7o28PxRepUfjs8E9YXtGsUInhUAiI45zmLkLcYLow0ydpTrH6SIa746h0Z2cIlV4Hn1Ow-7g8FbTiaw"/>
-                </div>
-                <!-- Duplicate Set for Loop -->
-                <div class="flex-shrink-0 w-[300px] md:w-[450px] aspect-[4/5] bg-surface-container-highest rounded-xl overflow-hidden">
-                <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA25fd0qEkA5x3zhM63-7XNjilUwRHGHXZUjmtouUI-JtKHnLtjNaUMrUXajzvV6xXiGoX8HgeCGOpTV0EHTEbCdVpkRTVqGwJaeBLFhV2HzxpDAvlwYAx9G8jeDfEXrPPpZD1i1sr3uxVgopXQXxJz_0kzSwr3CdKRTzU_NytXDOLCDOn7QxXNaml45m-C3loHju2wk-DGTg3w_qBUfM2VdsI3xathjxNB1Olr8qpaN6gQjZ2Uxgl3edbCTeXIV2-raSXa-DWFvrc"/>
-                </div>
-                <div class="flex-shrink-0 w-[300px] md:w-[450px] aspect-[4/5] bg-surface-container-highest rounded-xl overflow-hidden">
-                <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKk3bwb7XYBuoC0SE8wQ5yIimvRZX_Jicu7v5kmvuQMaOzztg6yIyc3-vCG7fdBywNFsOrUbKTiJfzwxAmM3M4rA4xa2zw36yQ-V2CAYIBFbzihsnPQU1LtTN6fz5bOncQHLfBSAzYoFEDLipyPhgQeVPtjIRSLWNAZyGC3a5wookYMgP09omBqeAc3KrBq_km34Ru7l-2fn4WAfzsQe2zKUl1PgEkgoHzkNFWbmQCYpBGB8lHy797j6EBdOUI-ZywSSjUu1V8Bjw"/>
-                </div>
-                <div class="flex-shrink-0 w-[300px] md:w-[450px] aspect-[4/5] bg-surface-container-highest rounded-xl overflow-hidden">
-                <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLsJMIpSDDYXpwPuiszTe5hKnypbPuhyqLAvaJHZpxMeOaPeJTPETWPrpcVX1cvkpRsBK_Ji748nTyLAR8WXwUH74HZ8OOY7tXIeHK7EbCjFEZgZiYAlhO1-6RtRfYzs-iIuZwRcQ1uiFKnAUalZon3QpINHb-3sgH3JfzugYrhKV6F_Ql5_O6_DcDUV0GMgMAJUHvw3gnUeo16a7CjLN54INVx4hLbIaXtXsAEEp_B6RcxZIHoBX6yvK1nUvxMefXLPCxFg2vLHU"/>
-                </div>
-                <div class="flex-shrink-0 w-[300px] md:w-[450px] aspect-[4/5] bg-surface-container-highest rounded-xl overflow-hidden">
-                <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbbn10sds7dc7lkhy3E5r2ut2wxhzvWnaPwsDH9jIlEkE1IAJpDA140GxVXY6yfFrWA6iCTzTxafmUlzxUl0DKC3mL9GVgA5FArgKTYD5609EQrMv5zSOVLHSrDsssQWuuJj-xHc-4KxpSANA5Ncf2kjZG8rwTSLbee0NmelNPOJl_2USW5jKwKn0Mltkz7o28PxRepUfjs8E9YXtGsUInhUAiI45zmLkLcYLow0ydpTrH6SIa746h0Z2cIlV4Hn1Ow-7g8FbTiaw"/>
-                </div>
-                </div>
-                </div>
-                <div class="text-center">
-                <p class="text-on-surface-variant font-body italic">Capturing our journey together.</p>
-                </div>
-                </div>
-            </section>
-            
-            <!-- 4. Wedding Details Section -->
-            <section class="py-32 bg-surface" id="details">
-
-                <div class="max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
-
-                    <div>
-
-                        <h2 class="font-headline text-4xl font-bold mb-12 text-on-background">Wedding Details</h2>
-
-                        <div class="space-y-12">
-
-                            <div class="flex gap-6 items-start">
-                                <span class="material-symbols-outlined text-primary text-3xl" data-icon="favorite">favorite</span>
-                                <div>
-                                    <h3 class="font-label text-sm uppercase tracking-widest text-primary mb-2">What</h3>
-                                    <p class="text-xl text-on-background">The Wedding Celebration of Joshley &amp; Richard</p>
-                                </div>
-                            </div>
-
-                            <div class="flex gap-6 items-start">
-                                <span class="material-symbols-outlined text-primary text-3xl" data-icon="location_on">location_on</span>
-                                <div>
-                                    <h3 class="font-label text-sm uppercase tracking-widest text-primary mb-2">Where</h3>
-                                    <p class="text-xl text-on-background leading-relaxed">The Grand Willow Ballroom<br/>123 Maple St, Springfield, IL</p>
-                                    <a class="inline-block mt-4 text-sm font-bold border-b border-primary pb-1 text-primary" href="#">View on Map</a>
-                                </div>
-                            </div>
-
-                            <div class="flex gap-6 items-start">
-                                <span class="material-symbols-outlined text-primary text-3xl" data-icon="calendar_today">calendar_today</span>
-                                <div>
-                                    <h3 class="font-label text-sm uppercase tracking-widest text-primary mb-2">When</h3>
-                                    <p class="text-xl text-on-background leading-relaxed">Saturday, June 24th, 2024<br/>Ceremony starts at 4:00 PM</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="relative">
-                        <div class="w-full aspect-square bg-surface-container rounded-2xl overflow-hidden shadow-sm">
-                            <img class="w-full h-full object-cover" data-alt="Elegant venue interior with high ceilings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3Nstc6dyXkifHTaUAvx88UnySDAPuRXuSDmcFPBudA1t0f5tVfYd-ARTGTAZh7vqzxgPqOjX9lowg4hUroqqp5D1nd1kSMOgzg39KlgXWVhju-m2Mt9whT2TjTZHWFGkrIUzVvV57oZxOhTy6N-yGGtaPpAp5Pexc0_zcVqn68kCSEObUbdKws6BQ6OHK5iE7rNMnR0E37_oQQpdsDUjnbfcXEMueleDrnVF1Jz1Bnbsy0Xrka9iW7cO7oP6kFTY55gI-7ajk5tE"/>
-                        </div>
-                        <div class="absolute -bottom-10 -left-10 w-64 aspect-video bg-surface-container-lowest p-6 rounded-xl shadow-xl hidden lg:block">
-                            <p class="font-headline italic text-on-surface-variant">"A celebration of love in the heart of the city."</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </section>
-
-            <!-- 5. RSVP Section -->
-            <section class="py-32 bg-surface-container-low" id="rsvp">
-                <div class="max-w-[700px] mx-auto px-6 text-center">
-                    <h2 class="font-headline text-4xl font-bold mb-4 text-on-background">Will You Join Us?</h2>
-                    <p class="text-on-surface-variant mb-16">Please let us know your plans by May 15th, 2024.</p>
-                    <form class="bg-surface-container-lowest p-10 md:p-16 rounded-2xl shadow-sm space-y-8 text-left">
-                        <div class="space-y-2">
-                            <label class="font-label text-xs uppercase tracking-widest text-on-surface-variant ml-1">Full Name</label>
-                            <input class="w-full bg-surface-container-low border-none rounded-lg px-4 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all" placeholder="Your name" type="text"/>
-                        </div>
-                        <div class="space-y-2">
-                            <label class="font-label text-xs uppercase tracking-widest text-on-surface-variant ml-1">Email Address</label>
-                            <input class="w-full bg-surface-container-low border-none rounded-lg px-4 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all" placeholder="email@example.com" type="email"/>
-                        </div>
-                        <div class="space-y-2">
-                            <label class="font-label text-xs uppercase tracking-widest text-on-surface-variant ml-1">Guest Count</label>
-                            <select class="w-full bg-surface-container-low border-none rounded-lg px-4 py-4 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-highest transition-all">
-                                <option value="1">Just Me</option>
-                                <option value="2">Me + 1 Guest</option>
-                                <option value="3">3 Guests Total</option>
-                                <option value="4">4 Guests Total</option>
-                            </select>
-                        </div>
-
-                        <div class="pt-6">
-                            <button class="w-full bg-primary text-on-primary py-5 rounded-lg font-bold uppercase tracking-widest transition-all hover:bg-primary-dim hover:shadow-lg active:scale-[0.98]" type="submit">
-                                Confirm Attendance
-                            </button>
-                        </div>
-
-                    </form>
-                </div>
-            </section>
-
-        </main>
-
-        <footer class="py-16 bg-surface border-t border-outline-variant/15 text-center">
-            <div class="flex justify-center gap-4 text-primary mb-8">
-            <span class="material-symbols-outlined" data-icon="all_inclusive">all_inclusive</span>
-            </div>
-            <p class="font-headline text-2xl font-bold text-on-background mb-2">Joshley &amp; Richard</p>
-            <p class="font-label text-xs uppercase tracking-widest text-on-surface-variant">Made with love • 2024</p>
-        </footer>
-
-    </body>
-
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+  
 </html>
