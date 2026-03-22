@@ -1,9 +1,10 @@
 module.exports = {
-    content: [
-      "./index.html",
-      "./src/**/*.{html,js,jsx,ts,tsx}"
-    ],
-    theme: {
+  darkMode: 'class',
+  content: [
+    "./index.html",
+    './src/**/*.{js,jsx,ts,tsx,html}',
+  ],
+  theme: {
       extend: {
         colors: {
           "surface-tint": "#897A5F",
@@ -62,9 +63,9 @@ module.exports = {
           "headline": ["Noto Serif"],
           "body": ["Manrope"],
           "label": ["Manrope"]
-        },
+          },
         borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
       },
-    },
-    plugins: [],
+  },
+  plugins: [],
 }
