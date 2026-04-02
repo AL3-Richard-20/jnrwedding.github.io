@@ -1,13 +1,17 @@
 import venue_img from '../images/e51c2a0f-fbbd-452e-984a-3f240cbc1f40.jpg'
 
-export default function Details({ address, date, day, time }){
+export default function Details({ address, date, day, time, ref, isVisible }) {
 
   const headline = '"A celebration of love in the heart of the city."'
 
     return (
-        <section className="py-32 bg-surface" id="details">
+        <section 
+          ref={ref}
+          className="py-32 bg-surface" id="details">
 
-          <div className="max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
+          <div 
+            className={`max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-20 items-center animate__animated ${isVisible ? 'animate__fadeInUp' : ''}`}
+            style={{ opacity: isVisible ? 1 : 0 }}>
 
             <div>
 
