@@ -1,3 +1,5 @@
+import venue_img from '../images/e51c2a0f-fbbd-452e-984a-3f240cbc1f40.jpg'
+
 export default function Details({ address, date, day, time }){
 
   const headline = '"A celebration of love in the heart of the city."'
@@ -44,7 +46,10 @@ export default function Details({ address, date, day, time }){
 
             <div className="relative">
               <div className="w-full aspect-square bg-surface-container rounded-2xl overflow-hidden shadow-sm">
-                  <img className="w-full h-full object-cover" data-alt="Elegant venue interior with high ceilings" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3Nstc6dyXkifHTaUAvx88UnySDAPuRXuSDmcFPBudA1t0f5tVfYd-ARTGTAZh7vqzxgPqOjX9lowg4hUroqqp5D1nd1kSMOgzg39KlgXWVhju-m2Mt9whT2TjTZHWFGkrIUzVvV57oZxOhTy6N-yGGtaPpAp5Pexc0_zcVqn68kCSEObUbdKws6BQ6OHK5iE7rNMnR0E37_oQQpdsDUjnbfcXEMueleDrnVF1Jz1Bnbsy0Xrka9iW7cO7oP6kFTY55gI-7ajk5tE"/>
+                  <img 
+                    className="w-full h-full object-cover" 
+                    data-alt="Elegant venue interior with high ceilings" 
+                    src={ venue_img }/>
               </div>
               <div className="absolute -bottom-10 -left-10 w-64 aspect-video bg-surface-container-lowest p-6 rounded-xl shadow-xl hidden lg:block">
                   <p className="font-headline italic text-on-surface-variant">{ headline }</p>

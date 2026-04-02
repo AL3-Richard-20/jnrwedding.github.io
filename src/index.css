@@ -29,6 +29,6 @@
   width: max-content;
   animation: scroll 30s linear infinite;
 }
-.animate-scroll:hover {
+/* .animate-scroll:hover {
   animation-play-state: paused;
-}
+} */
