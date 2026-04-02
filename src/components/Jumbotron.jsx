@@ -1,4 +1,4 @@
-export default function Jumbotron({ title1, wedding_date }){
+export default function Jumbotron({ title1, bride, ampersand, groom, wedding_date }){
 
     const jb_headtag = 'The Union of'
     const jb_footer  = 'Save the Date'
@@ -12,11 +12,13 @@ export default function Jumbotron({ title1, wedding_date }){
                 style={{ backgroundImage: `url(${background_img})` }} >
             </div>
             <div className="relative z-10 text-center px-6">
-                <p className="font-label text-sm uppercase tracking-[0.3em] text-primary mb-6">{ jb_headtag }</p>
-                <h1 className="font-headline text-6xl md:text-8xl font-black text-on-background mb-8 leading-tight">
-                { title1 }
+                <p className="font-label text-sm uppercase tracking-[0.3em] text-primary mb-6 animate__animated animate__fadeIn ">{ jb_headtag }</p>
+                <h1 className="font-headline text-6xl md:text-8xl font-black text-on-background mb-8 leading-tight md:flex md:items-center">
+                    <p className="animate__animated animate__fadeIn animate__delay-2s">{ bride }</p>
+                    <p className="animate__animated animate__fadeIn animate__delay-3s mx-2">{ ampersand }</p> 
+                    <p className="animate__animated animate__fadeIn animate__delay-4s">{ groom }</p>
                 </h1>
-                <p className="font-headline italic text-2xl text-on-surface-variant mb-12">{ jb_footer } • { wedding_date }</p>
+                <p className="font-headline italic text-2xl text-on-surface-variant mb-12 animate__animated animate__fadeIn animate__delay-5s">{ jb_footer } • { wedding_date }</p>
             </div>
         </section>
     )
