@@ -1,5 +1,7 @@
 import { useEffect } from 'react'
 
+import 'animate.css/animate.min.css';
+
 // Components
 import TopBar from './components/TopBar'
 import Jumbotron from './components/Jumbotron'
@@ -14,7 +16,11 @@ import { successAlert } from "./utils/alert";
 
 function App() {
 
-  const title1 = 'Joshley & Richard';
+  const Bride = 'Joshley'
+  const ampersand = '&'
+  const Groom = 'Richard'
+
+  const title1 = Bride + ' ' + ampersand + ' ' + Groom;
   const title2 = 'J&R Wedding';
 
   const wedding_date = '10.10.203n'
@@ -39,7 +45,12 @@ function App() {
       <main>
 
         {/*2. Minimal Jumbotron Section */}
-        <Jumbotron title1={ title1 } wedding_date={ wedding_date } />
+        <Jumbotron 
+          title1={ title1 } 
+          bride={ Bride }
+          ampersand={ ampersand }
+          groom={ Groom } 
+          wedding_date={ wedding_date } />
 
         {/*3. Image Carousel Section --> */}
         <ImgCarousel/>
