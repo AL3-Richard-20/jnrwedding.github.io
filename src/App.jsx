@@ -8,6 +8,10 @@ import Details from './components/Details'
 import RSVP from './components/RSVP'
 import Footer from './components/Footer'
 
+import { successAlert } from "./utils/alert";
+
+// successAlert("You are now listed!");
+
 function App() {
 
   const title1 = 'Joshley & Richard';
@@ -16,9 +20,9 @@ function App() {
   const wedding_date = '10.10.203n'
   const wedding_date2 = 'October 10, 203n'
   const wedding_day  = 'Saturday'
-  const wedding_time = '4:00 PM'
+  const wedding_time = '03:00 PM'
 
-  const address = 'The Grand Willow Ballroom 123 Maple St, Springfield, IL'
+  const address = 'TBA'
   const address_coordinates = ''
 
   useEffect(() => {
