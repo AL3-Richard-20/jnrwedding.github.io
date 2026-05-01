@@ -34,7 +34,7 @@ export default function ImgCarousel({ ref, isVisible }) {
   return (
       <section 
         ref={ref}
-        className="bg-surface-container-low py-24" 
+        className="glass-header py-24" 
         id="gallery">
 
           <div 

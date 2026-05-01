@@ -3,6 +3,7 @@ import { useEffect, useState, useRef  } from 'react'
 import 'animate.css/animate.min.css';
 
 // Components
+import Envelope from './components/Envelope'
 import TopBar from './components/TopBar'
 import Jumbotron from './components/Jumbotron'
 import ImgCarousel from './components/ImgCarousel'
@@ -34,6 +35,7 @@ function App() {
 
   useEffect(() => {
     document.title = title1;
+    document.getElementById("myVideo").play()
   }, []);
 
 
@@ -64,12 +66,15 @@ function App() {
 
   return (
 
-    <div className="bg-surface font-body text-on-background">
+    <div>
       
+        {/* 0. Envelope */}
+        <Envelope />
       {/* 1. Top Bar (Shared Component - Integrated) */}
       <TopBar title2={ title2 } />
 
       <main>
+
 
         {/*2. Minimal Jumbotron Section */}
         <Jumbotron 
