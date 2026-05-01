@@ -1,5 +1,5 @@
-import video_src_mov from '../../dist/assets/IMG_7287.mov'
-import video_src_mp4 from '../../dist/assets/IMG_7287.mp4'
+import video_src_mov from '../images/IMG_7287-CTOzlfFv-CTOzlfFv.mov'
+import video_src_mp4 from '../images/IMG_7287-BcM9HIer-BcM9HIer.mp4'
 
 export default function Jumbotron({ title1, bride, ampersand, groom, wedding_date }){
 

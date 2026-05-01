@@ -1,6 +1,6 @@
-import envelope_tip from "../../dist/assets/image_1.png";
-import envelope_bottom from "../../dist/assets/image_2.png";
-import envelope_bottom_mobile from "../../dist/assets/image_3.png";
+import envelope_tip from "../images/image_1-AjHdFeiD-AjHdFeiD.png";
+import envelope_bottom from "../images/image_2-_o4_FShn-_o4_FShn.png";
+import envelope_bottom_mobile from "../images/image_3-DenJ1x8V-DenJ1x8V.png";
 
 export default function Envelope(){
 
