@@ -17,8 +17,8 @@ export default function Jumbotron({ title1, bride, ampersand, groom, wedding_dat
             <video 
                 className="fixed right-0 bottom-0 object-cover min-w-full min-h-full opacity-20 grayscale" 
                 id="myVideo"
-                playsinline 
-                autoplay 
+                playsInline 
+                autoPlay 
                 muted 
                 loop>
                     <source src={ video_src_mp4 } type="video/mp4"></source>
