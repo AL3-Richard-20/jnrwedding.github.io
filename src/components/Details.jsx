@@ -7,7 +7,7 @@ export default function Details({ address, date, day, time, ref, isVisible }) {
     return (
         <section 
           ref={ref}
-          className="py-32 bg-surface" id="details">
+          className="glass-header py-32" id="details">
 
           <div 
             className={`max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-20 items-center animate__animated ${isVisible ? 'animate__fadeInUp' : ''}`}

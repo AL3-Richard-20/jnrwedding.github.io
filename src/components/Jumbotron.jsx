@@ -1,3 +1,6 @@
+import video_src_mov from '../../dist/assets/IMG_7287.mov'
+import video_src_mp4 from '../../dist/assets/IMG_7287.mp4'
+
 export default function Jumbotron({ title1, bride, ampersand, groom, wedding_date }){
 
     const jb_headtag = 'The Union of'
@@ -7,10 +10,21 @@ export default function Jumbotron({ title1, bride, ampersand, groom, wedding_dat
 
     return (
         <section className="relative h-[870px] flex items-center justify-center overflow-hidden bg-surface">
-            <div className="absolute inset-0 z-0 bg-cover bg-center opacity-20 grayscale" 
+            {/* <div className="absolute inset-0 z-0 bg-cover bg-center opacity-20 grayscale" 
                 data-alt="Faded elegant floral wedding background texture" 
                 style={{ backgroundImage: `url(${background_img})` }} >
-            </div>
+            </div> */}
+            <video 
+                className="fixed right-0 bottom-0 object-cover min-w-full min-h-full opacity-20 grayscale" 
+                id="myVideo"
+                playsinline 
+                autoplay 
+                muted 
+                loop>
+                    <source src={ video_src_mp4 } type="video/mp4"></source>
+                    <source src={ video_src_mov } type="video/quicktime"></source>
+                    Your browser does not support the video tag.
+            </video>
             <div className="relative z-10 text-center px-6">
                 <p className="font-label text-sm uppercase tracking-[0.3em] text-primary mb-6 animate__animated animate__fadeIn ">{ jb_headtag }</p>
                 <h1 className="font-headline text-6xl md:text-8xl font-black text-on-background mb-8 leading-tight md:flex md:items-center">

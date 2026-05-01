@@ -1,7 +1,7 @@
 export default function Footer({ title }) {
 
     return (
-        <footer className="py-16 bg-surface border-t border-outline-variant/15 text-center">
+        <footer className="glass-header py-16 border-t border-outline-variant/15 text-center">
             <div className="flex justify-center gap-4 text-primary mb-8">
             <span className="material-symbols-outlined" data-icon="all_inclusive">all_inclusive</span>
             </div>
