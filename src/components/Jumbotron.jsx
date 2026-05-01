@@ -1,5 +1,6 @@
-import video_src_mov from '../images/IMG_7287-CTOzlfFv-CTOzlfFv.mov'
+// import video_src_mov from '../images/IMG_7287-CTOzlfFv-CTOzlfFv.mov'
 import video_src_mp4 from '../images/IMG_7287-BcM9HIer-BcM9HIer.mp4'
+import video_src_webm from '../images/IMG_7287-BcM9HIer-BcM9HIer.webm'
 
 export default function Jumbotron({ title1, bride, ampersand, groom, wedding_date }){
 
@@ -21,8 +22,9 @@ export default function Jumbotron({ title1, bride, ampersand, groom, wedding_dat
                 autoPlay 
                 muted 
                 loop>
+                    <source src={ video_src_webm } type="video/webm"></source>
                     <source src={ video_src_mp4 } type="video/mp4"></source>
-                    <source src={ video_src_mov } type="video/quicktime"></source>
+                    {/* <source src={ video_src_mov } type="video/quicktime"></source> */}
                     Your browser does not support the video tag.
             </video>
             <div className="relative z-10 text-center px-6">
