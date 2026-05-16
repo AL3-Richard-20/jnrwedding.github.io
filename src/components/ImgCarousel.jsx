@@ -2,6 +2,8 @@ import carousel_img1 from "../images/Messenger_creation_0AF23B48-561C-4C2A-80D1-
 import carousel_img2 from "../images/Messenger_creation_9521F9A2-61F7-4FFC-9644-7A932673ADC3.jpeg";
 import carousel_img3 from "../images/Messenger_creation_B6E9584A-A8F6-4388-B022-7E0ABD29F453.jpeg";
 import carousel_img4 from "../images/Picsart_25-12-10_23-42-22-370.jpg";
+import carousel_img5 from "../images/hello_collage1.png";
+import carousel_img6 from "../images/hello_collage2.png";
 
 export default function ImgCarousel({ ref, isVisible }) {
 
@@ -20,14 +22,20 @@ export default function ImgCarousel({ ref, isVisible }) {
     carousel_img1,
     carousel_img3,
     carousel_img4,
+    carousel_img5,
+    carousel_img6,
     carousel_img2,
     carousel_img1,
     carousel_img3,
     carousel_img4,
+    carousel_img5,
+    carousel_img6,
     carousel_img2,
     carousel_img1,
     carousel_img3,
     carousel_img4,
+    carousel_img5,
+    carousel_img6,
     carousel_img2
   ]
 
